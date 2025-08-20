@@ -6,8 +6,8 @@ export class AuthService {
   account;
   constructor() {
     this.client
-    .setEndpoint(conf.appwriteUrl)
-    .setProject(conf.appwriteProjectId);
+      .setEndpoint(conf.appwriteUrl)
+      .setProject(conf.appwriteProjectId);
     this.account = new Account(this.client);
   }
 
@@ -20,8 +20,6 @@ export class AuthService {
         name
       );
       if (userAccount) {
-        // call another method
-
         return this.login({ email, password });
       } else {
         return userAccount;
@@ -50,10 +48,9 @@ export class AuthService {
 
   async logout() {
     try {
-        await this.account.deleteSessions();
+      await this.account.deleteSessions();
     } catch (error) {
-        throw error
-        
+      throw error;
     }
   }
 }
