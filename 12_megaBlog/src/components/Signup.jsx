@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Select, Logo, Input } from "./index";
+import { Button, Logo, Input } from "./index";
 import { useForm } from "react-hook-form";
 import { useDispatch } from "react-redux";
 import { useNavigate, Link } from "react-router-dom";
@@ -17,6 +17,7 @@ function Signup() {
       const userData = await authService.createAccount(data);
       if (userData) {
         const userData = await authService.getCurrentUser();
+        console.log(userData)
         if (userData) dispatch(login(userData));
         navigate("/");
       }
@@ -99,4 +100,3 @@ function Signup() {
 }
 
 export default Signup;
-

@@ -26,7 +26,7 @@ function App() {
     <div className="min-h-screen flex flex-col text-white">
       <Header />
       <main className="flex-grow container mx-auto px-4 py-8">
-        TODO: <Outlet />
+        <Outlet />
       </main>
       <Footer />
     </div>
