@@ -6,4 +6,13 @@ const conf = {
   appwriteBucketId: String(import.meta.env.VITE_APPWRITE_BUCKET_ID),
 };
 
+
+// Object.entries(conf).forEach(([key, value]) => {
+//   if (!value || value === "undefined") {
+//     console.error(`❌ Missing environment variable: ${key}`);
+//   } else {
+//     console.log(`✅ ${key}:`, value);
+//   }
+// });
+
 export default conf;

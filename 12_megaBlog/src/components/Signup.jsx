@@ -79,13 +79,6 @@ function Signup() {
               placeholder="Enter your password"
               {...register("password", {
                 required: true,
-                validate: {
-                  matchPatern: (value) =>
-                    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
-                      value
-                    ) ||
-                    "Password must be at least 8 chars, include uppercase, lowercase, number, and special character",
-                },
               })}
             />
 

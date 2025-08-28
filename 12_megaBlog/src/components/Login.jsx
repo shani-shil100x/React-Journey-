@@ -70,20 +70,11 @@ function Login() {
               type="password"
               {...register("password", {
                 required: true,
-                validate: {
-                  matchPatern: (value) =>
-                    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/.test(
-                      value
-                    ) ||
-                    "Password must be at least 8 chars, include uppercase, lowercase, number, and special character",
-                },
               })}
             />
-            <Button
-            type="submit"
-            className="w-full"
-            
-            >Sign in</Button>
+            <Button type="submit" className="w-full">
+           Log in
+            </Button>
           </div>
         </form>
       </div>
