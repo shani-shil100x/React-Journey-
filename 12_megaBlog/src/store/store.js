@@ -4,5 +4,6 @@ export const store = configureStore({
   reducer: {
     auth: authSlice,
     // Todo: add postSlice
+    posts: postReducer,
   },
 });
